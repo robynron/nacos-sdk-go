@@ -68,7 +68,7 @@ func main() {
 	if err != nil {
 		fmt.Printf("PublishConfig err: %v\n", err)
 	} else {
-		fmt.Printf("PublishConfig success\n")
+		fmt.Printf("successfully PublishConfig: %s\n", localConfig.Content)
 	}
 
 	//get config
@@ -78,6 +78,8 @@ func main() {
 	})
 	if err != nil {
 		fmt.Printf("GetConfig err: %v\n", err)
+	} else {
+		fmt.Printf("Successfully GetConfig : %v\n", content)
 	}
 
 	if content != localConfig.Content {
